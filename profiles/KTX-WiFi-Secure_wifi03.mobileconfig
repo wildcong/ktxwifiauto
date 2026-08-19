@@ -23,11 +23,11 @@
       <key>PayloadDisplayName</key>
       <string>KTX-WiFi-Secure</string>
       <key>PayloadIdentifier</key>
-      <string>dev.wildcong.ktxwifiauto.wifi03.wifi</string>
+      <string>dev.wildcong.ktxwifiauto.wifi</string>
       <key>PayloadType</key>
       <string>com.apple.wifi.managed</string>
       <key>PayloadUUID</key>
-      <string>A9A7E3C9-E88E-563D-9DA3-6FB30DD687B6</string>
+      <string>D7465A5C-33B6-5192-88A2-3661FF43AE38</string>
       <key>PayloadVersion</key>
       <integer>1</integer>
       <key>SSID_STR</key>
@@ -39,7 +39,7 @@
   <key>PayloadDisplayName</key>
   <string>KTX-WiFi-Secure (wifi03)</string>
   <key>PayloadIdentifier</key>
-  <string>dev.wildcong.ktxwifiauto.wifi03.profile</string>
+  <string>dev.wildcong.ktxwifiauto.profile</string>
   <key>PayloadOrganization</key>
   <string>wildcong</string>
   <key>PayloadRemovalDisallowed</key>
@@ -47,7 +47,7 @@
   <key>PayloadType</key>
   <string>Configuration</string>
   <key>PayloadUUID</key>
-  <string>40778A3F-EA99-57CC-B16E-5E00074AA792</string>
+  <string>20279AD7-C0E1-53F4-AC8D-F3BA1EFD4979</string>
   <key>PayloadVersion</key>
   <integer>1</integer>
   <key>TargetDeviceType</key>

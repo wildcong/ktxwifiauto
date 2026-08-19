@@ -10,6 +10,7 @@ iPhone에서 `KTX-WiFi-Secure`에 자동 연결하기 위한 configuration profi
 - 예: 8월은 `wifi08` / `wifi08`
 - 인증 방식: PEAP, EAP type 25
 - 대상 기기: iPhone/iPad/iPod touch (`TargetDeviceType` = `1`)
+- 월별 프로파일은 같은 `PayloadIdentifier`를 사용해 다음 달 설치 시 기존 프로파일 교체를 유도합니다.
 
 ## 사용 방법
 
@@ -69,3 +70,7 @@ GitHub Pages에서 위 검사가 실패해도 설치 페이지 안의 버튼은 
 ## Apple Watch 선택 화면 줄이기
 
 iPhone에 Apple Watch가 페어링되어 있으면 프로파일 설치 시 설치 대상을 묻는 화면이 나타날 수 있습니다. 이 프로파일은 Apple의 `TargetDeviceType` 최상위 키를 `1`로 설정해 iPhone/iPad/iPod touch용 프로파일임을 명시합니다.
+
+## 월별 갱신
+
+매월 새 프로파일을 설치하면 같은 식별자의 기존 KTX Wi-Fi 프로파일을 교체하도록 구성했습니다. 이전 버전처럼 `wifi08` 등 월별 식별자가 들어간 프로파일을 이미 설치했다면 한 번만 직접 삭제한 뒤 새 프로파일을 설치하세요.

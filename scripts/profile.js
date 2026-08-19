@@ -38,8 +38,8 @@
     const mm = padMonth(month);
     const credential = `wifi${mm}`;
     const safeCredential = escapeXml(credential);
-    const payloadUuid = await deterministicUuid(`ktx-wifi-secure:${credential}:wifi-payload`);
-    const profileUuid = await deterministicUuid(`ktx-wifi-secure:${credential}:configuration-profile`);
+    const payloadUuid = await deterministicUuid("ktx-wifi-secure:wifi-payload");
+    const profileUuid = await deterministicUuid("ktx-wifi-secure:configuration-profile");
 
     return `<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
@@ -66,7 +66,7 @@
       <key>PayloadDisplayName</key>
       <string>${SSID}</string>
       <key>PayloadIdentifier</key>
-      <string>dev.wildcong.ktxwifiauto.${safeCredential}.wifi</string>
+      <string>dev.wildcong.ktxwifiauto.wifi</string>
       <key>PayloadType</key>
       <string>com.apple.wifi.managed</string>
       <key>PayloadUUID</key>
@@ -82,7 +82,7 @@
   <key>PayloadDisplayName</key>
   <string>${SSID} (${safeCredential})</string>
   <key>PayloadIdentifier</key>
-  <string>dev.wildcong.ktxwifiauto.${safeCredential}.profile</string>
+  <string>dev.wildcong.ktxwifiauto.profile</string>
   <key>PayloadOrganization</key>
   <string>wildcong</string>
   <key>PayloadRemovalDisallowed</key>
