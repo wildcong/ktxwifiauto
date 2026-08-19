@@ -110,6 +110,35 @@
     window.setTimeout(() => URL.revokeObjectURL(url), 1000);
   }
 
+  async function registerServiceWorker() {
+    if (!("serviceWorker" in navigator)) {
+      return false;
+    }
+
+    try {
+      const registration = await navigator.serviceWorker.register("service-worker.js");
+      await navigator.serviceWorker.ready;
+
+      if (!navigator.serviceWorker.controller) {
+        const reloadUrl = new URL(window.location.href);
+        if (!reloadUrl.searchParams.has("sw")) {
+          reloadUrl.searchParams.set("sw", "ready");
+          window.location.replace(reloadUrl.toString());
+        }
+        return false;
+      }
+
+      if (registration.waiting) {
+        registration.waiting.postMessage({ type: "SKIP_WAITING" });
+      }
+
+      return true;
+    } catch (error) {
+      console.warn("Service Worker registration failed", error);
+      return false;
+    }
+  }
+
   const now = new Date();
   const month = now.getMonth() + 1;
   const mm = padMonth(month);
@@ -121,9 +150,15 @@
   document.getElementById("username-value").textContent = credential;
   document.getElementById("password-value").textContent = credential;
   document.getElementById("install-link").href = `profiles/${fileName}`;
+  document.getElementById("install-link").setAttribute("download", fileName);
 
   document.getElementById("generate-button").addEventListener("click", async () => {
     const profile = await buildProfile(month);
     download(profile, fileName);
+  });
+
+  registerServiceWorker().then((isReady) => {
+    const badge = document.getElementById("month-badge");
+    badge.textContent = isReady ? `${month}월 프로파일 준비됨` : `${month}월 프로파일`;
   });
 })();

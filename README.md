@@ -42,13 +42,15 @@ npm run generate:all
 Content-Type: application/x-apple-aspen-config
 ```
 
-GitHub Pages는 저장소별 MIME 타입 설정을 지원하지 않고, GitHub Pages 서버가 지원하는 MIME 데이터베이스에 의존합니다. 배포 후 반드시 다음처럼 확인하세요.
+GitHub Pages는 저장소별 MIME 타입 설정을 지원하지 않고, 현재 `.mobileconfig`를 `application/octet-stream`으로 제공할 수 있습니다. 이 저장소의 설치 페이지는 Service Worker를 등록한 뒤 페이지 안의 프로파일 링크를 `application/x-apple-aspen-config` 응답으로 감싸서 제공합니다. iPhone에서는 반드시 `index.html` 페이지에서 설치 버튼을 누르세요.
+
+서버가 직접 올바른 MIME 타입을 제공하는지 확인하려면 다음처럼 검사하세요.
 
 ```bash
 npm run check:mime -- https://wildcong.github.io/ktxwifiauto/profiles/KTX-WiFi-Secure_wifi08.mobileconfig
 ```
 
-만약 `Content-Type`이 `application/x-apple-aspen-config`가 아니라면, GitHub Pages만으로는 설치 링크가 XML 또는 일반 다운로드로 열릴 수 있습니다. 이 경우 `_headers`를 지원하는 Cloudflare Pages/Netlify 또는 `vercel.json`을 지원하는 Vercel에 같은 정적 파일을 배포하세요. 이 저장소에는 두 방식의 헤더 설정 파일을 함께 포함했습니다.
+GitHub Pages에서 위 검사가 실패해도 설치 페이지 안의 버튼은 Service Worker 경유로 MIME 타입을 보정합니다. 가장 확실한 서버 레벨 해결이 필요하면 `_headers`를 지원하는 Cloudflare Pages/Netlify 또는 `vercel.json`을 지원하는 Vercel에 같은 정적 파일을 배포하세요. 이 저장소에는 두 방식의 헤더 설정 파일을 함께 포함했습니다.
 
 ## 보안 메모
 
