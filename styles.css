@@ -25,6 +25,12 @@ body {
   line-height: 1.55;
 }
 
+body.download-page {
+  display: grid;
+  place-items: center;
+  padding: 24px;
+}
+
 a {
   color: inherit;
 }
@@ -260,6 +266,33 @@ a {
   color: var(--accent);
   font-size: 14px;
   font-weight: 650;
+}
+
+.download-shell {
+  width: min(420px, 100%);
+  display: grid;
+  justify-items: center;
+  gap: 16px;
+  padding: 28px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--surface);
+  text-align: center;
+}
+
+.download-shell h1 {
+  margin: 4px 0 0;
+  font-size: 24px;
+  line-height: 1.2;
+}
+
+.download-shell p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.download-shell .button {
+  width: 100%;
 }
 
 .steps {

@@ -54,6 +54,12 @@ npm run check:mime -- https://wildcong.github.io/ktxwifiauto/profiles/KTX-WiFi-S
 
 GitHub Pages에서 위 검사가 실패해도 설치 페이지 안의 버튼은 Service Worker 경유로 MIME 타입을 보정합니다. 가장 확실한 서버 레벨 해결이 필요하면 `_headers`를 지원하는 Cloudflare Pages/Netlify 또는 `vercel.json`을 지원하는 Vercel에 같은 정적 파일을 배포하세요. 이 저장소에는 두 방식의 헤더 설정 파일을 함께 포함했습니다.
 
+`download.html`은 현재 월 프로파일로 자동 이동하는 단축어용 진입점입니다.
+
+```text
+https://wildcong.github.io/ktxwifiauto/download.html
+```
+
 ## 보안 메모
 
 `.mobileconfig` 안의 `UserPassword`는 암호화되어 있지 않은 XML 문자열입니다. 공개 저장소에 월별 프로파일을 올리면 Wi-Fi 사용자 이름과 암호가 그대로 공개됩니다.
@@ -82,7 +88,7 @@ iOS 단축어 앱의 개인용 자동화로 매월 1일 설치 페이지를 자�
 1. 단축어 앱 > 자동화 > 새 자동화를 엽니다.
 2. 시간 조건을 고르고 반복을 매월 1일로 설정합니다.
 3. 실행 방식을 즉시 실행으로 설정합니다.
-4. URL 동작에 `https://wildcong.github.io/ktxwifiauto/`를 넣습니다.
+4. URL 동작에 `https://wildcong.github.io/ktxwifiauto/download.html`를 넣습니다.
 5. URL 열기 동작을 추가합니다.
 
 프로파일 설치 확인, iPhone 암호 입력, 경고 확인은 iOS 보안 정책상 자동화할 수 없습니다.
