@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>PayloadContent</key>
+  <array>
+    <dict>
+      <key>AutoJoin</key>
+      <true/>
+      <key>EAPClientConfiguration</key>
+      <dict>
+        <key>AcceptEAPTypes</key>
+        <array>
+          <integer>25</integer>
+        </array>
+        <key>UserName</key>
+        <string>wifi10</string>
+        <key>UserPassword</key>
+        <string>wifi10</string>
+      </dict>
+      <key>EncryptionType</key>
+      <string>WPA</string>
+      <key>PayloadDisplayName</key>
+      <string>KTX-WiFi-Secure</string>
+      <key>PayloadIdentifier</key>
+      <string>dev.wildcong.ktxwifiauto.wifi10.wifi</string>
+      <key>PayloadType</key>
+      <string>com.apple.wifi.managed</string>
+      <key>PayloadUUID</key>
+      <string>FEC57C7D-56BD-5189-BDC0-DD51116C2E43</string>
+      <key>PayloadVersion</key>
+      <integer>1</integer>
+      <key>SSID_STR</key>
+      <string>KTX-WiFi-Secure</string>
+    </dict>
+  </array>
+  <key>PayloadDescription</key>
+  <string>KTX-WiFi-Secure 10월 Wi-Fi 프로파일 (PEAP, wifi10/wifi10)</string>
+  <key>PayloadDisplayName</key>
+  <string>KTX-WiFi-Secure (wifi10)</string>
+  <key>PayloadIdentifier</key>
+  <string>dev.wildcong.ktxwifiauto.wifi10.profile</string>
+  <key>PayloadOrganization</key>
+  <string>wildcong</string>
+  <key>PayloadRemovalDisallowed</key>
+  <false/>
+  <key>PayloadType</key>
+  <string>Configuration</string>
+  <key>PayloadUUID</key>
+  <string>DF8BA4AD-B75A-5D2D-9E87-B7D2CA7BA74A</string>
+  <key>PayloadVersion</key>
+  <integer>1</integer>
+</dict>
+</plist>

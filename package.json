@@ -1,0 +1,11 @@
+{
+  "name": "ktxwifiauto",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "generate": "node scripts/generate-profile.mjs",
+    "generate:all": "node scripts/generate-profile.mjs --all",
+    "check:mime": "node scripts/check-mime.mjs"
+  }
+}

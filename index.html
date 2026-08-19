@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>KTX-WiFi-Secure 자동 연결 프로파일</title>
+    <meta name="description" content="iPhone에서 KTX-WiFi-Secure에 자동 연결하기 위한 Wi-Fi configuration profile 배포 페이지">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <main class="page">
+      <nav class="topbar" aria-label="상단">
+        <div class="brand">
+          <span class="brand-mark" aria-hidden="true">KTX</span>
+          <span>KTX Wi-Fi Auto</span>
+        </div>
+        <a class="repo-link" href="https://github.com/wildcong/ktxwifiauto">GitHub 저장소</a>
+      </nav>
+
+      <section class="hero" aria-labelledby="page-title">
+        <div>
+          <h1 id="page-title">KTX-WiFi-Secure 자동 연결 프로파일</h1>
+          <p class="lead">iPhone Safari에서 현재 월의 Wi-Fi 프로파일을 내려받아 설치합니다. 사용자 이름과 암호는 매월 <strong id="credential-inline">wifiMM</strong> 형식으로 맞춰집니다.</p>
+        </div>
+        <img class="art" src="assets/rail-mark.svg" alt="KTX-WiFi-Secure rail line mark">
+      </section>
+
+      <section class="install-panel" aria-labelledby="install-title">
+        <h2 id="install-title">설치</h2>
+        <div class="status-row">
+          <span class="ssid-badge">SSID: KTX-WiFi-Secure</span>
+          <span class="month-badge" id="month-badge">현재 월 확인 중</span>
+        </div>
+        <div class="actions">
+          <a class="button primary" id="install-link" href="profiles/KTX-WiFi-Secure_wifi08.mobileconfig">현재 월 프로파일 설치</a>
+          <button class="button secondary" id="generate-button" type="button">브라우저에서 프로파일 생성</button>
+        </div>
+        <div class="details" aria-label="프로파일 정보">
+          <div class="detail">
+            <span>인증 방식</span>
+            <strong>PEAP / EAP 25</strong>
+          </div>
+          <div class="detail">
+            <span>사용자 이름</span>
+            <strong id="username-value">wifi08</strong>
+          </div>
+          <div class="detail">
+            <span>암호</span>
+            <strong id="password-value">wifi08</strong>
+          </div>
+        </div>
+        <p class="notice">
+          <strong>iPhone에서 열기</strong>
+          Safari로 열어야 프로파일 설치 화면으로 이어질 가능성이 가장 높습니다. 설치 뒤에는 설정 앱의 프로파일 또는 VPN 및 기기 관리 화면에서 설치를 완료해야 합니다.
+        </p>
+      </section>
+
+      <section class="section" aria-labelledby="steps-title">
+        <h2 id="steps-title">설치 순서</h2>
+        <ol class="steps">
+          <li>iPhone Safari에서 이 페이지를 엽니다.</li>
+          <li>현재 월 프로파일 설치를 누릅니다.</li>
+          <li>설정 앱에서 다운로드된 프로파일을 설치합니다.</li>
+          <li>KTX-WiFi-Secure 접속 시 인증서 화면이 나오면 표시된 인증서 정보를 확인합니다.</li>
+        </ol>
+      </section>
+
+      <footer>
+        이 프로파일에는 Wi-Fi 사용자 이름과 암호가 포함됩니다. 공개 저장소에 배포하기 전 README의 보안 안내를 확인하세요.
+      </footer>
+    </main>
+
+    <script src="scripts/profile.js"></script>
+  </body>
+</html>
