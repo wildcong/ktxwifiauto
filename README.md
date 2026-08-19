@@ -32,7 +32,7 @@ npm run generate:all
 
 `index.html`을 GitHub Pages, Cloudflare Pages, Netlify, Vercel 같은 정적 호스팅에 배포할 수 있습니다.
 
-이 저장소에는 GitHub Pages용 Actions 워크플로가 포함되어 있습니다. GitHub 저장소의 Settings > Pages에서 Source를 GitHub Actions로 선택하면 `main` 브랜치 push 시 자동 배포됩니다.
+이 저장소에는 GitHub Pages용 Actions 워크플로가 포함되어 있습니다. 워크플로는 Pages 자동 활성화를 시도합니다. 실패하면 GitHub 저장소의 Settings > Pages에서 Source를 GitHub Actions로 선택한 뒤 워크플로를 다시 실행하세요.
 
 중요한 점은 `.mobileconfig` 파일의 HTTP 응답 헤더가 다음 MIME 타입이어야 iPhone Safari에서 설치 프로파일로 인식된다는 것입니다.
 
