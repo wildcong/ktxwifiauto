@@ -32,7 +32,9 @@ npm run generate:all
 
 `index.html`을 GitHub Pages, Cloudflare Pages, Netlify, Vercel 같은 정적 호스팅에 배포할 수 있습니다.
 
-이 저장소에는 GitHub Pages용 Actions 워크플로가 포함되어 있습니다. 워크플로는 Pages 자동 활성화를 시도합니다. 실패하면 GitHub 저장소의 Settings > Pages에서 Source를 GitHub Actions로 선택한 뒤 워크플로를 다시 실행하세요.
+이 저장소에는 GitHub Pages용 Actions 워크플로가 포함되어 있습니다. 공개 저장소에서는 `main` 브랜치 push 시 배포를 시도합니다. 비공개 저장소에서 Pages를 지원하는 플랜을 사용 중이라면 저장소 변수 `ENABLE_GITHUB_PAGES`를 `true`로 설정하거나 수동 실행으로 배포하세요.
+
+현재 플랜에서 비공개 저장소 Pages를 지원하지 않으면 GitHub API가 `Your current plan does not support GitHub Pages for this repository.` 오류를 반환합니다. 이 경우 저장소를 공개로 전환하거나, 같은 파일을 Cloudflare Pages/Netlify/Vercel 같은 정적 호스팅에 배포하세요.
 
 중요한 점은 `.mobileconfig` 파일의 HTTP 응답 헤더가 다음 MIME 타입이어야 iPhone Safari에서 설치 프로파일로 인식된다는 것입니다.
 
