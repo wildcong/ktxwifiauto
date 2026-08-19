@@ -91,4 +91,6 @@ iOS 단축어 앱의 개인용 자동화로 매월 1일 설치 페이지를 자�
 4. URL 동작에 `https://wildcong.github.io/ktxwifiauto/download.html`를 넣습니다.
 5. URL 열기 동작을 추가합니다.
 
+`download.html`은 페이지가 열리면 현재 월 프로파일 링크의 `a` 태그를 자동 실행합니다. iOS가 자동 실행을 막는 경우 화면의 직접 다운로드 버튼을 누르세요.
+
 프로파일 설치 확인, iPhone 암호 입력, 경고 확인은 iOS 보안 정책상 자동화할 수 없습니다.

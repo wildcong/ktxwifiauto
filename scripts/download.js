@@ -11,14 +11,15 @@
     return `profiles/${SSID}_${credential}.mobileconfig`;
   }
 
-  function setManualLink(profilePath) {
-    const link = document.getElementById("manual-download-link");
+  function setDownloadLink(profilePath) {
+    const link = document.getElementById("auto-download-link");
     link.href = profilePath;
     link.setAttribute("download", profilePath.split("/").pop());
+    return link;
   }
 
-  function openProfile(profilePath) {
-    window.location.replace(profilePath);
+  function clickDownloadLink(link) {
+    link.click();
   }
 
   async function registerServiceWorker() {
@@ -38,7 +39,7 @@
 
   async function start() {
     const profilePath = currentProfilePath();
-    setManualLink(profilePath);
+    const link = setDownloadLink(profilePath);
 
     const hasController = await registerServiceWorker();
     const url = new URL(window.location.href);
@@ -50,7 +51,7 @@
     }
 
     document.getElementById("download-status").textContent = "다운로드 확인 창이 곧 표시됩니다.";
-    window.setTimeout(() => openProfile(profilePath), 250);
+    window.setTimeout(() => clickDownloadLink(link), 250);
   }
 
   start();
