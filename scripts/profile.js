@@ -93,6 +93,8 @@
   <string>${profileUuid}</string>
   <key>PayloadVersion</key>
   <integer>1</integer>
+  <key>TargetDeviceType</key>
+  <integer>1</integer>
 </dict>
 </plist>
 `;

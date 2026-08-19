@@ -9,6 +9,7 @@ iPhone에서 `KTX-WiFi-Secure`에 자동 연결하기 위한 configuration profi
 - 암호: 사용자 이름과 동일
 - 예: 8월은 `wifi08` / `wifi08`
 - 인증 방식: PEAP, EAP type 25
+- 대상 기기: iPhone/iPad/iPod touch (`TargetDeviceType` = `1`)
 
 ## 사용 방법
 
@@ -64,3 +65,7 @@ GitHub Pages에서 위 검사가 실패해도 설치 페이지 안의 버튼은 
 - 가능하면 AnyLink Root CA 인증서를 확보해 프로파일에 신뢰할 CA와 서버 이름을 고정합니다.
 
 인증서 고정을 하지 않은 프로파일은 사용자가 접속 시 표시되는 서버 인증서를 직접 확인해야 합니다.
+
+## Apple Watch 선택 화면 줄이기
+
+iPhone에 Apple Watch가 페어링되어 있으면 프로파일 설치 시 설치 대상을 묻는 화면이 나타날 수 있습니다. 이 프로파일은 Apple의 `TargetDeviceType` 최상위 키를 `1`로 설정해 iPhone/iPad/iPod touch용 프로파일임을 명시합니다.

@@ -50,5 +50,7 @@
   <string>5F0F6859-C617-5CD7-AE46-BD762D9028CC</string>
   <key>PayloadVersion</key>
   <integer>1</integer>
+  <key>TargetDeviceType</key>
+  <integer>1</integer>
 </dict>
 </plist>
