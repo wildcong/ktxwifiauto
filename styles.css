@@ -218,6 +218,50 @@ a {
   letter-spacing: 0;
 }
 
+.section-copy {
+  max-width: 720px;
+  margin: 0 0 14px;
+  color: var(--muted);
+}
+
+.automation-section {
+  padding: 22px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--surface);
+}
+
+.copy-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 10px;
+  margin: 0 0 16px;
+}
+
+.copy-row input {
+  width: 100%;
+  min-height: 46px;
+  padding: 10px 12px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fbfcfe;
+  color: var(--ink);
+  font: inherit;
+}
+
+.button.compact {
+  min-height: 46px;
+  padding-inline: 14px;
+}
+
+.copy-status {
+  min-height: 20px;
+  margin: 12px 0 0;
+  color: var(--accent);
+  font-size: 14px;
+  font-weight: 650;
+}
+
 .steps {
   margin: 0;
   padding-left: 20px;
@@ -275,6 +319,14 @@ code {
   }
 
   .details {
+    grid-template-columns: 1fr;
+  }
+
+  .automation-section {
+    padding: 18px;
+  }
+
+  .copy-row {
     grid-template-columns: 1fr;
   }
 }

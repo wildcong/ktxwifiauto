@@ -65,6 +65,23 @@
         </ol>
       </section>
 
+      <section class="section automation-section" aria-labelledby="automation-title">
+        <h2 id="automation-title">매월 1일 자동으로 열기</h2>
+        <p class="section-copy">단축어 앱에서 개인용 자동화를 만들면 매월 1일 아침에 이 설치 페이지가 자동으로 열립니다. iOS 보안 확인과 프로파일 설치 암호 입력은 직접 진행해야 합니다.</p>
+        <div class="copy-row">
+          <input id="shortcut-url" type="text" value="https://wildcong.github.io/ktxwifiauto/" readonly aria-label="단축어에 넣을 설치 페이지 주소">
+          <button class="button secondary compact" id="copy-shortcut-url" type="button">주소 복사</button>
+        </div>
+        <ol class="steps">
+          <li>단축어 앱을 열고 자동화 탭에서 새 자동화를 만듭니다.</li>
+          <li>시간 조건을 선택하고 매월 1일, 열차 타기 전 시간으로 맞춥니다.</li>
+          <li>실행 방식을 즉시 실행으로 선택합니다.</li>
+          <li>새 빈 자동화에 URL 동작을 추가하고 위 주소를 붙여넣습니다.</li>
+          <li>URL 열기 동작을 추가한 뒤 완료합니다.</li>
+        </ol>
+        <p class="copy-status" id="copy-status" role="status" aria-live="polite"></p>
+      </section>
+
       <footer>
         이 프로파일에는 Wi-Fi 사용자 이름과 암호가 포함됩니다. 공개 저장소에 배포하기 전 README의 보안 안내를 확인하세요.
       </footer>

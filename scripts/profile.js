@@ -159,6 +159,21 @@
     download(profile, fileName);
   });
 
+  document.getElementById("copy-shortcut-url").addEventListener("click", async () => {
+    const input = document.getElementById("shortcut-url");
+    const status = document.getElementById("copy-status");
+
+    input.select();
+    input.setSelectionRange(0, input.value.length);
+
+    try {
+      await navigator.clipboard.writeText(input.value);
+      status.textContent = "복사됨";
+    } catch (error) {
+      status.textContent = "주소를 선택했습니다. 복사가 안 되면 직접 복사하세요.";
+    }
+  });
+
   registerServiceWorker().then((isReady) => {
     const badge = document.getElementById("month-badge");
     badge.textContent = isReady ? `${month}월 프로파일 준비됨` : `${month}월 프로파일`;
